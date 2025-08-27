@@ -1,0 +1,11 @@
+name: Cancel Test Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  infinite-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Infinite Loop
+        run: while true; do echo 'Running...'; sleep 60; done
