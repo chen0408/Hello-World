@@ -1,1 +1,4 @@
-test
+echo "This is a test for secret scanning. AWS key: AKIAIOSFODNN7EXAMPLE" > test.txt
+git add test.txt
+git commit -m "test: adding fake secret to verify scanning"
+git push origin test-secret-scanning
