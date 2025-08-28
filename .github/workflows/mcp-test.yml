@@ -1,0 +1,15 @@
+name: MCP Test Workflow
+on: [workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Create Artifact
+        run: echo 'Test artifact' > artifact.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcp-artifact
+          path: artifact.txt
